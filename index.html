@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Weather Forecast App</title>
+        <link rel="stylesheet" href="output.css">
+    </head>
+    <body class="bg-green-200">
+        <h1 class="text-white bg-black text-center text-2xl sm:text-3xl py-4 font-bold rounded-lg mb-6">Weather Forecast</h1>
+        <div id="container" class="flex gap-10 p-2">
+            <div class="w-2/5 md:w-1/2 ml-5">
+            <h3 class="text-lg font-medium mb-2">Enter a City Name</h3>
+            <input id="city-input" class="w-full p-3 text-base border border-gray-300 rounded-lg mb-4 focus:outline-none focus:border-blue-500" type="text" placeholder="E.g., Delhi, London, Dehradun">
+            <button id="search-btn" class="w-full bg-green-600 text-white py-3 rounded-lg hover:bg-green-800 transition duration-200">Search</button>
+
+            <!-- Dropdown for recent cities -->
+            <div id="recent-cities-container" class="relative hidden mt-3">
+                <button id="dropdown-btn" class="w-full bg-gray-300 text-black py-3 rounded-lg flex justify-between items-center">
+                    Recently Searched Cities
+                    <svg class="w-5 h-5 ml-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                    </svg>
+                </button>
+                <ul id="recent-cities-dropdown" class="absolute left-0 w-full bg-white shadow-md rounded-lg mt-2 z-10 hidden">
+                <!-- Recently searched cities will be added here dynamically -->
+                </ul>
+            </div>
+  
+            <div id="separator" class="flex items-center justify-center mt-6 mb-6">
+                <span class="h-px w-full bg-gray-400"></span>
+                <span class="mx-4 text-gray-600 text-lg">or</span>
+                <span class="h-px w-full bg-gray-400"></span>
+            </div>
+                <button id="location-btn" class="w-full bg-gray-500 text-white py-3 rounded-lg hover:bg-gray-700 transition duration-200">Use Current Location</button>
+            </div>
+
+            <div id="weather-data" class="w-full md:w-1/2">
+                <div id="current-weather" class="bg-green-600 text-white rounded-lg p-6 flex justify-between items-center">
+                    <div id="details">
+                        <h2 class="text-2xl font-bold mb-2">_______ ( ______ )</h2>
+                        <h6 class="text-base">Temperature: __°C</h6>
+                        <h6 class="text-base mt-1">Wind: __ M/S</h6>
+                        <h6 class="text-base mt-1">Humidity: __%</h6>
+                    </div>
+                    <div id="icon">
+                        <img src="" alt="Weather Icon" class="max-w-[120px] -mt-4">
+                        <h6 class="capitalize mt-2">_______</h6>
+                    </div>
+                </div>
+
+                <div id="days-forecast" class="mt-8">
+                    <h2 class="text-lg font-semibold mb-4">5-Day Forecast</h2>
+                    <ul id="weather-cards" class="flex flex-wrap justify-evenly gap-4">
+                        <li id="card1" class="bg-gray-600 text-white p-4 rounded-lg">
+                            <h3 class="text-lg font-medium mb-2">( ______ )</h3>
+                            <h6>Temp: __°C</h6>
+                            <h6>Wind: __ M/S</h6>
+                            <h6>Humidity: __%</h6>
+                        </li>
+                        <li id="card2" class="bg-gray-600 text-white p-4 rounded-lg">
+                            <h3 class="text-lg font-medium mb-2">( ______ )</h3>
+                            <h6>Temp: __°C</h6>
+                            <h6>Wind: __ M/S</h6>
+                            <h6>Humidity: __%</h6>
+                        </li>
+                        <li id="card3"  class="bg-gray-600 text-white p-4 rounded-lg">
+                            <h3 class="text-lg font-medium mb-2">( ______ )</h3>
+                            <h6>Temp: __°C</h6>
+                            <h6>Wind: __ M/S</h6>
+                            <h6>Humidity: __%</h6>
+                        </li>
+                        <li id="card4" class="bg-gray-600 text-white p-4 rounded-lg">
+                            <h3 class="text-lg font-medium mb-2">( ______ )</h3>
+                            <h6>Temp: __°C</h6>
+                            <h6>Wind: __ M/S</h6>
+                            <h6>Humidity: __%</h6>
+                        </li>
+                        <li id="card5" class="bg-gray-600 text-white p-4 rounded-lg">
+                            <h3 class="text-lg font-medium mb-2">( ______ )</h3>
+                            <h6>Temp: __°C</h6>
+                            <h6>Wind: __ M/S</h6>
+                            <h6>Humidity: __%</h6>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <script src="script.js">
+
+
+        </script>
+    </body>
+</html>
